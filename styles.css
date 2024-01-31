@@ -14,7 +14,7 @@
     perspective: 1200px;
     cursor: pointer;
     transition: transform 0.5s ease;
-    transform-style: preserve-3d; /* Add this line to fix the issue */
+    transform-style: preserve-3d; /* Add preserve-3d for better 3D effect */
 }
 
 .front, .back {
@@ -36,13 +36,11 @@
     transform: rotateY(0deg);
     transition: transform 0.5s ease;
     font-size: 20px;
-    z-index: 2; /* Ensure the front is above the back */
 }
 
 .back {
     background-color: #fff;
     color: black;
-    display: none;
     transform: rotateY(180deg);
     transition: transform 0.5s ease;
     padding: 20px;
@@ -51,7 +49,7 @@
     font-family: Arial, sans-serif;
     overflow: auto;
     font-size: 12px;
-    z-index: 1; /* Ensure the back is below the front */
+    display: none;
 }
 
 .envelope.open .front {
@@ -61,16 +59,4 @@
 .envelope.open .back {
     display: block;
     transform: rotateY(0deg);
-}
-
-.letter-container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* On hover effect */
-.envelope:hover {
-    transform: scale(1.05);
 }
