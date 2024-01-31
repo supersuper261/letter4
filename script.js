@@ -1,3 +1,3 @@
-function toggleEnvelope(envelope) {
-    envelope.classList.toggle("open");
+function toggleLetterCase() {
+    document.querySelector('.letter-case').classList.toggle('open');
 }
