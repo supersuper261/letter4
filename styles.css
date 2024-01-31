@@ -1,3 +1,31 @@
+/* Add letter-case styles */
+.envelope-case {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #8B0000;
+    overflow: hidden;
+    position: relative;
+}
+
+.letter-case {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.5s ease;
+    transform: translateY(100%); /* Start with the letter-case moved down */
+}
+
+.letter-case.open {
+    transform: translateY(0); /* Move the letter-case up when open */
+}
+
+
 /* Add envelope-case styles */
 .envelope-case {
     display: flex;
