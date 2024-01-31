@@ -77,3 +77,7 @@
 .envelope:hover {
     transform: scale(1.05);
 }
+
+.letter-case-open {
+    transform: translateY(-400px);
+}
