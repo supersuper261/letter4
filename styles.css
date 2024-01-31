@@ -1,14 +1,12 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #8B0000; /* Red background color */
+/* Add envelope-case styles */
+.envelope-case {
+    position: relative;
+    width: 400px;
+    height: 600px;
 }
 
 .envelope {
-    position: relative;
+    position: absolute;
     width: 300px;
     height: 400px;
     perspective: 1200px;
@@ -26,8 +24,8 @@ body {
 
 .front {
     background-color: #fff;
-    display: block; /* Ensure the front is initially visible */
-    position: absolute; /* Add position for proper stacking */
+    display: block;
+    position: absolute;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -43,8 +41,8 @@ body {
 .back {
     background-color: #fff;
     color: black;
-    display: none; /* Ensure the back is initially hidden */
-    position: absolute; /* Add position for proper stacking */
+    display: none;
+    position: absolute;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -58,7 +56,6 @@ body {
     overflow: auto;
     font-size: 12px;
 }
-
 
 .envelope.open .front {
     transform: rotateY(-180deg);
